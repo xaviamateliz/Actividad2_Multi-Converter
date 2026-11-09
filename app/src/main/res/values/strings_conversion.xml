@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="conversion_title">Conversion: %1$s</string>
+    <string name="hint_value">Value to convert</string>
+    <string name="label_from">From</string>
+    <string name="label_to">To</string>
+    <string name="select_unit">Select a unit…</string>
+    <string name="btn_convert">Convert</string>
+    <string name="btn_swap">⇅  Swap units</string>
+    <string name="btn_back">Choose another category</string>
+    <string name="result_placeholder">Result</string>
+    <string name="msg_empty">Enter a value to convert.</string>
+    <string name="msg_invalid">The value entered is not a valid number.</string>
+    <string name="msg_negative">Negative values are not allowed in this category.</string>
+    <string name="msg_select_units">Select both the source and the target unit.</string>
+    <string name="msg_success">Conversion completed.</string>
+    <string name="msg_no_category">No category received. Go back and choose one.</string>
+</resources>
