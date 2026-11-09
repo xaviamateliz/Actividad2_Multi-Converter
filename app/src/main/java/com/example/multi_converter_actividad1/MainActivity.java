@@ -105,11 +105,8 @@ public class MainActivity extends AppCompatActivity {
      * Salida: ninguna. Cambia la imagen de la pantalla.
      */
     private void mostrarImagen(int posicion) {
-        // 1. Cargamos el recurso como Bitmap
         Bitmap original = BitmapFactory.decodeResource(getResources(), imagenes[posicion]);
-        // 2. Lo escalamos a un tamaño fijo (400x400 píxeles)
         Bitmap escalado = Bitmap.createScaledBitmap(original, 400, 400, true);
-        // 3. Lo mostramos en el ImageView
         imgCategoria.setImageBitmap(escalado);
     }
 
