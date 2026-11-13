@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="conv_stroke">#9E9E9E</color>
+    <color name="conv_result_bg">#EADDFF</color>
+    <color name="conv_result_text">#21005D</color>
+</resources>
