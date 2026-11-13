@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Multi-Converter</string>
+    <string name="app_title">Multi-Converter</string>
+    <string name="choose_category">¿Qué quieres convertir?</string>
+    <string name="btn_continue">Continuar</string>
+    <string name="category_image_desc">Imagen de la categoría seleccionada</string>
+</resources>
