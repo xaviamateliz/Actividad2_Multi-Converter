@@ -26,10 +26,9 @@ import com.google.android.material.snackbar.Snackbar;
  */
 public class MainActivity extends AppCompatActivity {
 
-    // Clave que usa el Intent para enviar la categoría a la Activity 2
-    public static final String EXTRA_CATEGORY = "categoria";
-
-    // Textos del Spinner. La posición 0 es la opción vacía
+    // Textos del Spinner. La posición 0 es la opción vacía.
+    // IMPORTANTE: el orden de las categorías (de la 1 a la 10) debe ser
+    // el MISMO que el orden de las constantes del enum Category.
     private final String[] categorias = {
             "Selecciona una categoría",
             "Distancia", "Temperatura", "Volumen", "Masa", "Tiempo",
@@ -114,7 +113,8 @@ public class MainActivity extends AppCompatActivity {
      * Comprueba que hay una categoría elegida y abre la Activity 2.
      * Entrada: ninguna (lee la posición del Spinner).
      * Salida: ninguna. Si no hay categoría muestra un Snackbar; si la hay,
-     * lanza un Intent con la categoría.
+     * lanza un Intent con el nombre del enum Category (por ejemplo "DISTANCIA"),
+     * usando la misma clave que lee ConversionActivity.
      */
     private void abrirConversion() {
         int posicion = spinnerCategoria.getSelectedItemPosition();
@@ -126,8 +126,11 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
+        // posicion - 1 porque la posición 0 del Spinner es "Selecciona una categoría"
+        Category elegida = Category.values()[posicion - 1];
+
         Intent intent = new Intent(this, ConversionActivity.class);
-        intent.putExtra(EXTRA_CATEGORY, categorias[posicion]);
+        intent.putExtra(ConversionActivity.EXTRA_CATEGORY, elegida.name());
         startActivity(intent);
     }
 }
